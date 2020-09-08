@@ -20,11 +20,11 @@ jobs:
     - name: Login IBM Cloud
       env:
         IBM_ACCOUNT: ${{ secrets.IBM_ACCOUNT1 }}
-        REGION_NUM: ${{ secrets.REGION_NUM1 }}
+        REGION_NUM: ${{ secrets.REGION_NUM }}
       run: |
         ./IBM_Cloud_CLI/ibmcloud login <<EOF
         $IBM_ACCOUNT1
-        $REGION_NUM1
+        $REGION_NUM
         no
         EOF
     - name: Target IBM Cloud
